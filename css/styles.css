@@ -591,6 +591,11 @@ a[href*="maps"] {
 
 /* MODAL WINDOW */
 
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -599,14 +604,10 @@ a[href*="maps"] {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: scale var(--transition-dur-and-func),
+  transition: opacity var(--transition-dur-and-func),
     visibility var(--transition-dur-and-func);
 }
-.backdrop.is-hidden {
-  scale: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+
 .modal {
   position: absolute;
   top: 50%;
