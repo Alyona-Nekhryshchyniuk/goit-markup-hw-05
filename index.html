@@ -63,7 +63,9 @@
 
       <section class="hero-section">
         <h1 class="hero-heading">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-        <button type="button" class="hero-button">Request our service</button>
+        <button type="button" class="hero-button" data-modal-open>
+          Request our service
+        </button>
       </section>
 
       <!-- PROS SECTION -->
@@ -449,19 +451,18 @@
         </div>
       </div>
     </footer>
-    <div class="overlay">
-      <div class="modal-window">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon-close-modal"
-        >
-          <use href="./images/icons.svg#icon-close-modal"></use>
-        </svg>
+
+    <!-- MODAL WINDOW -->
+
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg width="18" height="18" class="close-modal-icon">
+            <use href="./images/icons.svg#close-modal-icon"></use>
+          </svg>
+        </button>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
